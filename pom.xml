@@ -5,7 +5,7 @@
     <groupId>dk.magenta.dmjx</groupId>
     <artifactId>doc-preview-clickable-links</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>default-share-sdk Share Jar Module - SDK 3</name>
+    <name>Share Jar Module - SDK 3</name>
     <description>Share JAR Module (to be included in the share.war) - SDK 3</description>
     <packaging>jar</packaging>
 
@@ -22,6 +22,10 @@
             customized and then deployed and run by the tomcat maven plugin when
             executing for example $ mvn clean install alfresco:run -->
         <alfresco.share.version>5.1.f</alfresco.share.version>
+
+        <!-- Aikau framework version, it is released separately, so it can be useful to be able
+        to bring in newer versions with bug fixes etc -->
+        <aikau.version>1.0.63</aikau.version>
 
         <!-- Default is to run with a Community edition, change to 'enterprise' if using Enterprise edition -->
         <maven.alfresco.edition>community</maven.alfresco.edition>
@@ -84,7 +88,7 @@
                        (i.e. share.war)
                    -->
                     <shareModules>
-                        <!-- Bring in this JAR project, need to be included here, otherwise share-config-custom.xml.sample
+                        <!-- Bring in this JAR project, need to be included here, otherwise share-config-custom.xml
                              will not be picked up. It will not be read from target/classes/META-INF -->
                         <moduleDependency>
                             <groupId>${project.groupId}</groupId>
@@ -97,12 +101,6 @@
                                  in the WAR disttribution, newest version is picked -->
                             <groupId>${alfresco.groupId}</groupId>
                             <artifactId>aikau</artifactId>
-                            <version>${aikau.version}</version>
-                        </moduleDependency>
-
-                        <moduleDependency>
-                            <groupId>${alfresco.groupId}</groupId>
-                            <artifactId>aikau-additional-languages</artifactId>
                             <version>${aikau.version}</version>
                         </moduleDependency>
                     </shareModules>

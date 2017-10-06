@@ -14,11 +14,11 @@
    -->
 
    <!-- Add module specific messages and labels -->
-   <bean id="default-share-sdk.resources"
+   <bean id="doc-preview-clickable-links.resources"
          class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
       <property name="resourceBundles">
          <list>
-            <value>alfresco.web-extension.messages.default-share-sdk</value>
+            <value>alfresco.web-extension.messages.doc-preview-clickable-links</value>
          </list>
       </property>
    </bean>
