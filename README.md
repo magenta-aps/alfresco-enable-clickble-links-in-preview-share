@@ -1,33 +1,18 @@
-# Alfresco Share JAR Module - SDK 3
+# Alfresco Share JAR Module - SDK 3.0.1
 
 To run this module use `mvn clean install -DskipTests=true alfresco:run` or `./run.sh` and verify that it 
 
- * Runs the embedded Tomcat + H2 DB 
- * Runs Alfresco Share
- * Packages both as JAR and AMP assembly
+This module brings in the fix to enable clickable links in document previews.
+The original fix is located here is this [pull request!](https://github.com/Alfresco/share-old/pull/2/commits/9b89fdbe72f0d6ba7ae24d396fa246ce9c2c498c) but has been abstracted into this module so as to make it possible to
+apply it to other alfresco versions that may not have the fix included.
+ 
+ 
+# Few things to notice regarding SDK related issues
 
-Note. You access Share as follows: http://localhost:8081/share
- 
-Note. You need an Alfresco Platform instance running at http://localhost:8080/alfresco that Share can talk to.
-      Typically you will just kick off a platform-jar module for that.
- 
-# Few things to notice
-
- * No parent pom
- * WAR assembly is handled by the Alfresco Maven Plugin configuration, if needed
- * Standard JAR packaging and layout
- * Works seamlessly with Eclipse and IntelliJ IDEA
- * JRebel for hot reloading, JRebel maven plugin for generating rebel.xml, agent usage: `MAVEN_OPTS=-Xms256m -Xmx1G -agentpath:/home/martin/apps/jrebel/lib/libjrebel64.so`
- * AMP as an assembly
- * [Configurable Run mojo](https://github.com/Alfresco/alfresco-sdk/blob/sdk-3.0/plugins/alfresco-maven-plugin/src/main/java/org/alfresco/maven/plugin/RunMojo.java) in the `alfresco-maven-plugin`
- * No unit testing/functional tests just yet
- * Resources loaded from META-INF
- * Web Fragment (this includes a sample servlet configured via web fragment)
- 
-# TODO
- 
-  * Abstract assembly into a dependency so we don't have to ship the assembly in the archetype
- 
+ * It is not possible to see the changed applied if run locally using maven to test it in an embedded tomcat 
+ * When deployed to an alfresco instance currently the PdfJs files are replaced successfully but the minified version
+ remains that of the original out-of-the-box after server startup hence the reason for also providing the minified file.
+ Files were minified using [HookyQR minify plugin!](https://marketplace.visualstudio.com/items?itemName=HookyQR.minify)for [Visual Studio Code!](https://code.visualstudio.com/Download).
    
   
  

@@ -1,0 +1,494 @@
+.previewer.PdfJs .controlssearch .yui-checkbox-button-checked button,
+.textLayer {
+    color: #000
+}
+
+.previewer.PdfJs {
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc
+}
+
+.previewer.PdfJs.fullPage {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: none
+}
+
+.previewer.PdfJs .viewer {
+    overflow-y: scroll
+}
+
+.previewer.PdfJs .viewer.loading {
+    background: url(../../../themes/default/images/wait.gif) center no-repeat
+}
+
+.previewer.PdfJs .viewer:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    background-color: #fafafa
+}
+
+.previewer.PdfJs [hidden] {
+    display: none!important
+}
+
+.previewer.PdfJs .controls {
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 0 0;
+    height: 26px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px
+}
+
+.body .previewer.PdfJs .controls {
+    border-top: 0
+}
+
+.previewer.PdfJs .controls .separator {
+    display: inline;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #fff;
+    height: 16px;
+    width: 0;
+    margin: 4px 4px 4px 1px;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.previewer.PdfJs .controls button,
+.previewer.PdfJs .controls>select,
+.previewer.PdfJs .controlssearch button {
+    line-height: 1.5em;
+    border-color: #B7B7B7;
+    border-width: 1px
+}
+
+.previewer.PdfJs .controls .numPages {
+    padding-right: 5px
+}
+
+.previewer.PdfJs .controls>a>img {
+    margin: 4px;
+    height: 16px
+}
+
+.previewer.PdfJs .controls button {
+    background-color: transparent;
+    padding: 0 2px;
+    min-height: 1.75em
+}
+
+.yui-skin-lightTheme .previewer.PdfJs .controls .yui-button,
+.yui-skin-lightTheme .previewer.PdfJs .controls .yui-button .first-child {
+    background-color: transparent
+}
+
+.previewer.PdfJs .controls .yui-menu-button button {
+    padding-right: 20px
+}
+
+.previewer.PdfJs .controls input,
+.previewer.PdfJs .controls select,
+.previewer.PdfJs .controls span {
+    vertical-align: middle
+}
+
+.previewer.PdfJs .controls>button:hover {
+    background-image: url(../../../../themes/default/images/sprite.png)
+}
+
+.previewer.PdfJs .controls>select {
+    border-style: solid;
+    width: auto;
+    font-size: .9em
+}
+
+.previewer.PdfJs .controls input {
+    width: 3em;
+    font-size: .9em
+}
+
+.previewer.PdfJs .controls>button>img {
+    width: 16px;
+    height: 16px
+}
+
+.previewer.PdfJs .controls>button[disabled]>img {
+    opacity: .5
+}
+
+.previewer.PdfJs .controls .pageNumber {
+    text-align: right
+}
+
+.previewer.PdfJs .controls .sidebarBtn {
+    float: left
+}
+
+.previewer.PdfJs .controlssearch {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: .9em;
+    padding: 2px 0
+}
+
+.previewer.PdfJs .controlssearch button {
+    background-color: transparent;
+    padding: 0 3px
+}
+
+.previewer.PdfJs .controlssearch input[type=search] {
+    width: 10em;
+    font-size: .9em
+}
+
+.previewer.PdfJs .controlssearch .yui-checkbox-button .first-child {
+    border: none;
+    display: inline;
+    margin-right: 0;
+    margin-left: 0
+}
+
+.previewer.PdfJs .controlssearch .buttonHighLightAll .yui-checkbox-button {
+    background-image: url(images/highlight-all-off-16.png);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    border: none
+}
+
+.previewer.PdfJs .controlssearch .buttonHighLightAll .yui-checkbox-button-checked {
+    background-image: url(images/highlight-all-on-16.png);
+    background-color: transparent
+}
+
+.previewer.PdfJs .controlssearch .buttonMatchCase .yui-checkbox-button {
+    background-image: url(images/case-sensitive-off-16.png);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    border: none
+}
+
+.previewer.PdfJs .controlssearch .buttonMatchCase .yui-checkbox-button-checked {
+    background-image: url(images/case-sensitive-on-16.png);
+    background-color: transparent
+}
+
+.body .previewer.PdfJs .controls .searchBarToggle,
+.previewer.PdfJs .controls .linkbutton,
+.previewer.PdfJs .controls .maximizebutton,
+.previewer.PdfJs .controls .maximizebuttonSep,
+.previewer.PdfJs .controls .presentbutton {
+    display: none
+}
+
+.linkDialog,
+.searchDialog {
+    visibility: hidden;
+    position: absolute
+}
+
+.searchDialog.yui-panel {
+    min-width: 23em
+}
+
+.yui-panel.linkDialog .bd,
+.yui-panel.searchDialog .bd {
+    padding: .5em 1em!important
+}
+
+.yui-panel.linkDialog .bd>div {
+    padding: .25em 0!important
+}
+
+.yui-panel.linkDialog .ft,
+.yui-panel.searchDialog .ft {
+    border-top: none;
+    padding: 0
+}
+
+.linkDialog .bd input[type=text] {
+    width: 35em
+}
+
+.previewer.PdfJs .sidebar {
+    display: none;
+    width: 199px;
+    background-color: #fafafa;
+    border-right: 1px solid #ccc;
+    float: left;
+    font-size: .9em;
+    text-align: left
+}
+
+.loadingIcon,
+.page>a,
+canvas {
+    display: block
+}
+
+.previewer.PdfJs .sidebar>div {
+    height: 100%
+}
+
+.sidebar .yui-navset .yui-content {
+    background-color: transparent!important;
+    border-width: 0!important;
+    position: absolute!important;
+    top: 26px!important;
+    bottom: 0!important;
+    left: 0!important;
+    right: 0!important;
+    padding: 0!important
+}
+
+.loadingIcon,
+.textLayer {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0
+}
+
+.sidebar .yui-navset .yui-nav {
+    border-width: 0 0 1px!important
+}
+
+.sidebar .yui-navset .yui-nav a em,
+.sidebar .yui-navset .yui-navset-top .yui-nav a em {
+    padding: .25em .75em!important;
+    height: 16px!important
+}
+
+.sidebar .yui-navset .yui-content>div {
+    height: 100%!important;
+    overflow-y: scroll!important
+}
+
+.previewer.PdfJs .sidebar .outlineView {
+    padding: 0 .5em
+}
+
+.previewer.PdfJs .sidebar .outlineView>div,
+.previewer.PdfJs .sidebar .searchResults>div {
+    margin-top: .25em
+}
+
+.previewer.PdfJs .sidebar .outlineView>:first-child {
+    margin-top: .5em
+}
+
+.previewer.PdfJs .sidebar .outlineView>:last-child {
+    margin-bottom: .5emt
+}
+
+.previewer.PdfJs .sidebar .searchView input {
+    width: 90px;
+    vertical-align: text-bottom
+}
+
+.previewer.PdfJs .sidebar .searchView button {
+    font-size: .9em;
+    padding: 0 4px;
+    line-height: .9em;
+    height: 10px
+}
+
+.previewer.PdfJs .sidebar .searchView>div {
+    padding: .5em
+}
+
+.previewer.PdfJs .sidebar .searchView>div:first-child {
+    background-color: #ccc
+}
+
+.previewer.PdfJs .sidebar .searchResults {
+    text-align: left
+}
+
+.sidebar .thumbnailView .page {
+    border: 1px solid #eee;
+    cursor: pointer!important;
+    margin: 10px 0 0 10px!important
+}
+
+.previewer.PdfJs .documentView .page.activePage,
+.previewer.PdfJs .sidebar .thumbnailView .page.activePage {
+    border-color: #aaa
+}
+
+.previewer.PdfJs .thumbnailView .page:last-child {
+    margin-bottom: 10px!important
+}
+
+.sidebar .thumbnailView .page.highlighted {
+    border: 3px solid #0093FF!important;
+    border-radius: 3px!important
+}
+
+.outlineItem>.outlineItems {
+    margin-left: 20px
+}
+
+.outlineItem>a {
+    text-decoration: none;
+    color: #000
+}
+
+canvas {
+    margin: auto
+}
+
+.previewer.PdfJs .page {
+    width: 816px;
+    height: 1056px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #fff
+}
+
+.previewer.PdfJs .documentView.multiPage .page {
+    margin: 10px 0 0 10px;
+    float: left
+}
+
+.previewer.PdfJs .documentView.multiPage .page:last-child {
+    margin-bottom: 10px
+}
+
+.page>a {
+    position: absolute
+}
+
+.page>a:hover {
+    opacity: .2;
+    background: #ff0;
+    box-shadow: 0 2px 10px #ff0;
+    -moz-box-shadow: 0 2px 10px #ff0;
+    -webkit-box-shadow: 0 2px 10px #ff0
+}
+
+.loadingIcon {
+    position: absolute;
+    background: url(images/loading-icon.gif) center no-repeat
+}
+
+.textLayer {
+    position: absolute;
+    font-family: sans-serif
+}
+
+.textLayer>div {
+    color: transparent;
+    position: absolute;
+    line-height: 1.3;
+    white-space: pre
+}
+
+.textLayer .highlight {
+    margin: -1px;
+    padding: 1px;
+    background-color: rgba(180, 0, 170, .2);
+    border-radius: 4px
+}
+
+.textLayer .highlight.begin {
+    border-radius: 4px 0 0 4px
+}
+
+.textLayer .highlight.end {
+    border-radius: 0 4px 4px 0
+}
+
+.textLayer .highlight.middle {
+    border-radius: 0
+}
+
+.textLayer .highlight.selected {
+    background-color: rgba(0, 100, 0, .2)
+}
+
+.annotationLayer section {
+    position: absolute
+}
+
+.annotationLayer .linkAnnotation>a {
+    position: absolute;
+    font-size: 1em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+}
+
+.annotationLayer .linkAnnotation>a:hover {
+    opacity: .2;
+    background: #ff0;
+    box-shadow: 0 2px 10px #ff0
+}
+
+.annotationLayer .textAnnotation img {
+    position: absolute;
+    cursor: pointer
+}
+
+.annotationLayer .popupWrapper {
+    position: absolute;
+    width: 20em
+}
+
+.annotationLayer .popup {
+    position: absolute;
+    z-index: 200;
+    max-width: 20em;
+    background-color: #FF9;
+    box-shadow: 0 2px 5px #333;
+    border-radius: 2px;
+    padding: .6em;
+    margin-left: 5px;
+    cursor: pointer;
+    word-wrap: break-word
+}
+
+.annotationLayer .popup h1 {
+    font-size: 1em;
+    border-bottom: 1px solid #000;
+    padding-bottom: .2em
+}
+
+.annotationLayer .popup p {
+    padding-top: .2em
+}
+
+.annotationLayer .fileAttachmentAnnotation,
+.annotationLayer .highlightAnnotation,
+.annotationLayer .squigglyAnnotation,
+.annotationLayer .strikeoutAnnotation,
+.annotationLayer .underlineAnnotation {
+    cursor: pointer
+}
+
+::selection {
+    background: rgba(0, 0, 255, .3)
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 255, .3)
+}
+
+.yui-skin-lightTheme .searchDialog.yui-panel .hd {
+    padding: .1em
+}
