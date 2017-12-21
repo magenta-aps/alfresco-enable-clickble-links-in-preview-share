@@ -12,7 +12,7 @@ apply it to other alfresco versions that may not have the fix included.
  * It is not possible to see the changed applied if run locally, using maven to test it in an embedded tomcat. 
  * When deployed to an alfresco instance currently, the PdfJs files are replaced successfully but the minified version
  remains that of the original (out-of-the-box) file after server startup, hence the reason for also providing the minified file.
- Files were minified using [HookyQR minify plugin](https://marketplace.visualstudio.com/items?itemName=HookyQR.minify)for [Visual Studio Code](https://code.visualstudio.com/Download).
+ Files were minified using [HookyQR minify plugin](https://marketplace.visualstudio.com/items?itemName=HookyQR.minify) for [Visual Studio Code](https://code.visualstudio.com/Download).
    
   
  
